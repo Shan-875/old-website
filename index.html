@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StyleNest - Online Clothing Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .product {
+      background: #fff;
+      padding: 15px;
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    form {
+      background: #fff;
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #25D366;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .owner {
+      text-align: center;
+      margin: 30px 0;
+      font-size: 18px;
+      color: #444;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .orders-section {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .orders-section h3 {
+      margin-bottom: 10px;
+    }
+
+    .order-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>StyleNest</h1>
+    <p>Trendy Fashion Delivered to Your Doorstep</p>
+  </header>
+
+  <section class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200x250" alt="T-Shirt" />
+      <h3>Classic T-Shirt</h3>
+    
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x250" alt="Hoodie" />
+      <h3>Stylish Hoodie</h3>
+    
+    </div>
+  </section>
+
+  <section>
+    <form id="orderForm">
+      <h2>Place Your Order</h2>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="phone" placeholder="Your Mobile Number" required />
+      <input type="text" id="product" placeholder="Product Name" required />
+      <input type="number" id="quantity" placeholder="Quantity" required />
+      <input type="text" id="address" placeholder="Delivery Address" required />
+      <textarea id="notes" placeholder="Any Notes (optional)"></textarea>
+      <button type="button" onclick="sendWhatsApp()">Order via WhatsApp</button>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <div class="owner">
+    <strong>Website Owner:</strong> Shan V. Varghese
+  </div>
+
+  <section class="orders-section">
+    <h3>Customer Orders</h3>
+    <div id="ordersList"></div>
+    <button onclick="showOrders()">Show All Orders</button>
+  </section>
+
+  <footer>
+    &copy; 2025 StyleNest. All rights reserved.
+  </footer>
+
+  <script>
+    function sendWhatsApp() {
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const product = document.getElementById('product').value.trim();
+      const quantity = document.getElementById('quantity').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+
+      if (!name || !phone || !product || !quantity || !address) {
+        alert("Please fill all required fields.");
+        return;
+      }
+
+      const message = `🛍️ *New Order*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n👕 *Product:* ${product}\n🔢 *Quantity:* ${quantity}\n🏠 *Address:* ${address}\n📝 *Notes:* ${notes || "None"}`;
+
+      const ownerNumber = "6282877896"; // Replace with your WhatsApp number
+      const url = `https://wa.me/${6282877896}?text=${encodeURIComponent("Introducing The Silent Elephant - where premium meets ...")}`;
+      window.open(url, '_blank');
+    }
+
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const order = {
+        name: document.getElementById('name').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        product: document.getElementById('product').value.trim(),
+        quantity: document.getElementById('quantity').value.trim(),
+        address: document.getElementById('address').value.trim(),
+        notes: document.getElementById('notes').value.trim()
+      };
+
+      let orders = JSON.parse(localStorage.getItem("orders") || "[]");
+      orders.push(order);
+      localStorage.setItem("orders", JSON.stringify(orders));
+
+      alert("Order saved! You can view it below.");
+      document.getElementById("orderForm").reset();
+    });
+
+    function showOrders() {
+      const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+      const list = document.getElementById("ordersList");
+      list.innerHTML = "";
+
+      if (orders.length === 0) {
+        list.innerHTML = "<p>No orders yet.</p>";
+        return;
+      }
+
+      orders.forEach((o, index) => {
+        list.innerHTML += `
+          <div class="order-item">
+            <strong>Order ${index + 1}</strong><br>
+            👤 ${o.name}<br>
+            📞 ${o.phone}<br>
+            👕 ${o.product}<br>
+            🔢 ${o.quantity}<br>
+            🏠 ${o.address}<br>
+            📝 ${o.notes || "None"}
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
+
+
