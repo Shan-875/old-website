@@ -2,224 +2,567 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>StyleNest - Online Clothing Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> The Silent Elephant - Order Now</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    h1, h2 {
+      text-align: center;
       color: #333;
     }
 
-    header {
-      background: #222;
-      color: #fff;
+    .about, .welcome, .features {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
       padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
       text-align: center;
     }
 
     .products {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      padding: 20px;
       gap: 20px;
+      justify-content: center;
+      margin: 20px 0;
     }
 
     .product {
       background: #fff;
       padding: 15px;
-      width: 200px;
-      border: 1px solid #ddd;
       border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      width: 220px;
       text-align: center;
     }
 
     .product img {
       width: 100%;
-      height: auto;
-      border-radius: 5px;
+      border-radius: 8px;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      color: #555;
+      font-size: 14px;
     }
 
     form {
-      background: #fff;
-      max-width: 400px;
-      margin: 40px auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background: #25D366;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-
-    .owner {
-      text-align: center;
-      margin: 30px 0;
-      font-size: 18px;
-      color: #444;
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    .orders-section {
-      max-width: 600px;
+      max-width: 500px;
       margin: 30px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .orders-section h3 {
-      margin-bottom: 10px;
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
     }
 
-    .order-item {
-      border-bottom: 1px solid #ddd;
-      padding: 10px 0;
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      flex: 1;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1eb95a;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    a {
+      color: #25D366;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>StyleNest</h1>
-    <p>Trendy Fashion Delivered to Your Doorstep</p>
-  </header>
+  <h1>🛍️ The Silent Elephant - Place Your Order</h1>
 
-  <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/200x250" alt="T-Shirt" />
-      <h3>Classic T-Shirt</h3>
-    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Silent Elephant - Custom Apparel</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 1.5em;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    p {
+      line-height: 1.7;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .highlight {
+      background: #eef7f3;
+      padding: 10px 20px;
+      border-left: 4px solid #00a86b;
+      margin: 20px 0;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .icon {
+      font-size: 1.2em;
+      margin-right: 8px;
+    }
+    .contact {
+      background-color: #fafafa;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🐘 The Silent Elephant</h1>
+    <p><strong>Custom Apparel for Colleges, Events & Sports Teams</strong></p>
+
+    <hr>
+
+    <div class="section">
+      <h2>📌 Who We Are</h2>
+      <p>
+        At <strong>The Silent Elephant</strong>, we believe in creating more than just t-shirts — we create wearable identity.
+        Based in Kerala and proudly rooted in quality and creativity, we specialize in custom bulk apparel that helps youth communities, educational institutions, and sports teams bring their brand to life through fashion.
+      </p>
+      <p>
+        Whether it’s a college fest, inter-department match, startup meet-up, or a university summit, our team ensures every piece of clothing carries the spirit of your event with elegance and energy.
+      </p>
     </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x250" alt="Hoodie" />
-      <h3>Stylish Hoodie</h3>
-    
+
+    <div class="section">
+      <h2>👕 What We Offer</h2>
+      <h3 class="icon">🔹 Product Categories</h3>
+      <ul>
+        <li>Casual & Dry-fit T-Shirts (Round Neck / V-Neck / Full Sleeve)</li>
+        <li>Sports & Tournament Jerseys (Cricket, Football, Volleyball, Kabaddi, etc.)</li>
+      </ul>
+
+      <h3 class="icon">🔹 Fabrics Available</h3>
+      <ul>
+        <li>Dotnet</li>
+        <li>Saleena</li>
+        <li>PP</li>
+        <li>Honeycomb</li>
+        <li>SMK</li>
+        <li>Super Poly</li>
+      </ul>
+
+      <h3 class="icon">🔹 Printing Techniques</h3>
+      <ul>
+        <li>DTF Printing – vibrant and detailed print on dark/light fabrics</li>
+        <li>Sublimation – full-body prints for sports jerseys</li>
+        <li>Screen Printing – ideal for simple, bold designs in bulk</li>
+      </ul>
+
+      <h3 class="icon">🔹 Size Range</h3>
+      <p>S, M, L, XL, XXL, XXXL</p>
     </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x250" alt="T-Shirt chines" />
-      <h3>Stylish Hoodie</h3>
-      </div>
-  </section>
 
-  <section>
-    <form id="orderForm">
-      <h2>Place Your Order</h2>
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="text" id="phone" placeholder="Your Mobile Number" required />
-      <input type="text" id="product" placeholder="Product Name" required />
-      <input type="number" id="quantity" placeholder="Quantity" required />
-      <input type="text" id="address" placeholder="Delivery Address" required />
-      <textarea id="notes" placeholder="Any Notes (optional)"></textarea>
-      <button type="button" onclick="sendWhatsApp()">Order via WhatsApp</button>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+    <div class="section">
+      <h2>💡 Why Institutions Choose Us</h2>
+      <ul>
+        <li>✔ Premium Fabrics Only – soft, breathable, and made to last</li>
+        <li>✔ 100% Customization – colors, logo, names, numbers — we bring your vision to life</li>
+        <li>✔ On-Time Delivery – even for last-minute fests and sports days</li>
+        <li>✔ No Minimum Inventory Risk – order only what you need</li>
+        <li>✔ Affordable Bulk Pricing – suitable for student budgets</li>
+        <li>✔ Founder-Led Experience – we personally oversee every order</li>
+      </ul>
+    </div>
 
-  <div class="owner">
-    <strong>Website Owner:</strong> Shan V. Varghese
-  </div>
+    <div class="section">
+      <h2>📦 How to Place Your Order</h2>
+      <ol>
+        <li><strong>Share Your Idea:</strong> Send us your concept, logo, or reference designs (even a rough sketch works).</li>
+        <li><strong>Choose Fabric, Quantity & Sizes:</strong> Pick from our material and style options.</li>
+        <li><strong>Get Pricing & Timeline:</strong> We’ll give you a transparent quote and clear delivery date.</li>
+        <li><strong>Approve & Print:</strong> Final designs are shared for approval before printing.</li>
+        <li><strong>We Deliver to Your Doorstep:</strong> Pan-India delivery with trusted courier partners.</li>
+      </ol>
+    </div>
 
-  <section class="orders-section">
-    <h3>Customer Orders</h3>
-    <div id="ordersList"></div>
-    <button onclick="showOrders()">Show All Orders</button>
-  </section>
+    <div class="section">
+      <h2>🌟 Ideal For:</h2>
+      <ul>
+        <li>College Festivals & Cultural Events</li>
+        <li>Department T-Shirts & Union Wear</li>
+        <li>Sports Jerseys (Cricket, Football, etc.)</li>
+        <li>Youth Meetups, Camps & Startup Summits</li>
+        <li>Batch T-Shirts, Farewell, and Reunions</li>
+      </ul>
+    </div>
+
+    <div class="section contact">
+      <h2>📲 Contact Us</h2>
+      <p><strong>Jeswin Mathew</strong><br>
+        Founder – The Silent Elephant<br><br>
+        📞 +91 6282877896<br>
+        📧 thesilentelephant2025@gmail.com<br>
+        📷 Instagram: <a href="https://instagram.com/the.silent.elephant" target="_blank">@the.silent.elephant</a><br>
+        📍 Based in Kerala
+      </p>
+    </div>
+
+    <div class="footer">
+  <p><strong>📎 Here’s What You’ll Receive with This Catalog:</strong></p>
+  <ul>
+    <li>📷 Sample product mockup images</li>
+    <li>🧵 Fabric texture photos to help choose materials</li>
+    <li>🎨 Design samples to visualize customization</li>
+  </ul>
+</div>
+</p>
 
   <footer>
-    &copy; 2025 StyleNest. All rights reserved.
+    &copy; 2025 The Silent Elephant | <a href="owner.html">Go to Owner Page</a>
   </footer>
 
   <script>
-    function sendWhatsApp() {
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const product = document.getElementById('product').value.trim();
-      const quantity = document.getElementById('quantity').value.trim();
-      const address = document.getElementById('address').value.trim();
-      const notes = document.getElementById('notes').value.trim();
-
-
-      const message = `🛍️ *New Order*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n👕 *Product:* ${product}\n🔢 *Quantity:* ${quantity}\n🏠 *Address:* ${address}\n📝 *Notes:* ${notes || "None"}`;
-
-      const ownerNumber = "6282877896"; // Replace with your WhatsApp number
-      const url = `https://wa.me/${6282877896}?text=${encodeURIComponent("Introducing The Silent Elephant - where premium meets ...")}`;
-      window.open(url, '_blank');
+    function handleSubmit() {
+      alert("Thank you! Your order is noted. Please click 'Order via WhatsApp' to confirm.");
     }
 
-    document.getElementById("orderForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+    function sendWhatsApp() {
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const product = document.getElementById("product").value.trim();
+      const quantity = document.getElementById("quantity").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const notes = document.getElementById("notes").value.trim();
 
-      const order = {
-        name: document.getElementById('name').value.trim(),
-        phone: document.getElementById('phone').value.trim(),
-        product: document.getElementById('product').value.trim(),
-        quantity: document.getElementById('quantity').value.trim(),
-        address: document.getElementById('address').value.trim(),
-        notes: document.getElementById('notes').value.trim()
-      };
-
-      let orders = JSON.parse(localStorage.getItem("orders") || "[]");
-      orders.push(order);
-      localStorage.setItem("orders", JSON.stringify(orders));
-
-      alert("Order saved! You can view it below.");
-      document.getElementById("orderForm").reset();
-    });
-
-    function showOrders() {
-      const orders = JSON.parse(localStorage.getItem("orders") || "[]");
-      const list = document.getElementById("ordersList");
-      list.innerHTML = "";
-
-      if (orders.length === 0) {
-        list.innerHTML = "<p>No orders yet.</p>";
-        return;
-      }
-
-      orders.forEach((o, index) => {
-        list.innerHTML += `
-          <div class="order-item">
-            <strong>Order ${index + 1}</strong><br>
-            👤 ${o.name}<br>
-            📞 ${o.phone}<br>
-            👕 ${o.product}<br>
-            🔢 ${o.quantity}<br>
-            🏠 ${o.address}<br>
-            📝 ${o.notes || "None"}
-          </div>
-        `;
-      });
+      const message = `🛍️ *New Order from The Silent Elephant*%0A%0A👤 *Name:* ${name}%0A📞 *Phone:* ${phone}%0A👕 *Product:* ${product}%0A🔢 *Quantity:* ${quantity}%0A🏠 *Address:* ${address}%0A📝 *Notes:* ${notes || "None"}`;
+      const ownerNumber = "6282877896";
+      const whatsappURL = `https://wa.me/${6282877896}?text=${"Introducing The Silent Elephant - where premium meets ..."}`;
+      window.open(whatsappURL, "_blank");
     }
   </script>
+
 </body>
 </html>
 
 
+  </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Silent Elephant - Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+      color: #333;
+    }
+    form {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .checkbox-group label, .radio-group label {
+      font-weight: normal;
+    }
+    .file-input {
+      margin-top: 10px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .submit-btn, .whatsapp-btn {
+      flex: 1;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .submit-btn:hover {
+      background: #0056b3;
+    }
+    .whatsapp-btn {
+      background: #25D366;
+    }
+    .whatsapp-btn:hover {
+      background: #1eb95a;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="orderFormhttps://docs.google.com/forms/d/e/1FAIpQLSft_53-SpwJp5LLbuqW8Ce2sl1sJifAaTd0dBd1xpq18j4eVg/viewform?usp=header">
+    <h2>🛙️ The Silent Elephant - Custom Apparel Order Form</h2>
+
+  <script>
+    function getCheckedValues(className) {
+      return Array.from(document.querySelectorAll('.' + className + ':checked'))
+        .map(cb => cb.value).join(', ');
+    }
+
+    function sendToWhatsApp() {
+      const name = document.getElementById("full_name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value || "Not provided";
+      const org = document.getElementById("organization").value;
+      const products = getCheckedValues("product");
+      const prodOther = document.getElementById("product_other").value;
+      const quantity = document.getElementById("quantity").value;
+      const fabrics = getCheckedValues("fabric");
+      const fabOther = document.getElementById("fabric_other").value;
+      const printing = document.querySelector("input[name='printing']:checked")?.value || "";
+      const printOther = document.getElementById("printing_other").value;
+      const sizes = getCheckedValues("size");
+      const date = document.getElementById("event_date").value;
+      const notes = document.getElementById("notes").value || "None";
+      const referral = document.querySelector("input[name='referral']:checked")?.value || "";
+
+      const msg = `🛙️ *New Order - The Silent Elephant*%0A
+👤 *Name:* ${name}%0A📞 *Phone:* ${phone}%0A📧 *Email:* ${email}%0A🏢 *Org:* ${org}%0A
+🏦 *Products:* ${products}${prodOther ? ", " + prodOther : ""}%0A🔢 *Quantity:* ${quantity}%0A🧵 *Fabric:* ${fabrics}${fabOther ? ", " + fabOther : ""}%0A
+🎨 *Printing:* ${printing}${printOther ? ", " + printOther : ""}%0A📏 *Sizes:* ${sizes}%0A🗓 *Date:* ${date || "Not specified"}%0A📝 *Notes:* ${notes}%0A
+📢 *Referral:* ${referral}`;
+
+      const whatsappNumber = "916282877896";
+      const whatsappURL = `https://wa.me/${6282877896}?text=${encodeURIComponent("Introducing The Silent Elephant - where premium meets ...")}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+
+</body>
+</html>
+<h1>🐘 The Silent Elephant</h1>
+<p>Custom Apparel for Colleges, Events & Sports Teams</p>
+<div style="text-align: center; margin-top: 40px;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSft_53-SpwJp5LLbuqW8Ce2sl1sJifAaTd0dBd1xpq18j4eVg/viewform?usp=header"
+     target="_blank"
+     style="display: inline-block; background-color: #ff6600; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-size: 16px;">
+    📝 Fill Google Order Form (Optional)
+  </a>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Silent Elephant - WhatsApp Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background: #f0f0f0;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1eb95a;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="whatsapp-btn"
+     href="https://wa.me/916282877896?text=Hi%20The%20Silent%20Elephant%2C%20I%20would%20like%20to%20place%20an%20order%20for%20custom%20t-shirts.%20Please%20share%20details."
+     target="_blank">
+    📲 Order via WhatsApp
+  </a>
+
+  <footer>
+    <p>&copy; 2025 The Silent Elephant | Based in Kerala</p>
+  </footer>
+
+</body>
+</html>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('https://i.ibb.co/TDV6dq1d/Whats-App-Image-2025-06-29-at-9-21-47-PM.jpg'); /* Your custom image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* slight transparency */
+    border-radius: 16px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  }
+
+  h1, h2, h3 {
+    color: #222;
+  }
+
+  .whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .whatsapp-btn:hover {
+    background-color: #1eb95a;
+  }
+
+  .footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+  }
+</style>
